@@ -10,7 +10,6 @@ dist/
 target/
 yarn.lock
 .next/
-out/
 .idea/
 
 # Compiled Java class files

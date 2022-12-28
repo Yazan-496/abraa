@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8307],{92188:function(n,e,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/new-dashboard/orders/received-orders/main",function(){return _(73859)}])}},function(n){n.O(0,[3859,9774,2888,179],function(){return n(n.s=92188)}),_N_E=n.O()}]);

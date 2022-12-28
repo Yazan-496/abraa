@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8178],{17195:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/new-dashboard/shipper-account/accountsettings/main",function(){return _(31873)}])}},function(n){n.O(0,[5675,5077,1896,4296,9774,2888,179],function(){return n(n.s=17195)}),_N_E=n.O()}]);
