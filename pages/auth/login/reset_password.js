@@ -1,8 +1,10 @@
 import { useRouter, withRouter } from "next/router"
 import { useState, useEffect } from "react"
-import Checkbox from "@material/react-checkbox"
-import "@material/react-checkbox/dist/checkbox.css"
+// import Checkbox from "@material/react-checkbox"
+// import "@material/react-checkbox/dist/checkbox.css"
 import Head from "next/head"
+
+import { MDBCheckbox } from "mdb-react-ui-kit"
 import { SendPhoneNumber } from "../../../redux/actions"
 import Link from "@/assets/LinkWithQuery"
 
@@ -53,12 +55,7 @@ const ResetPassword = (props) => {
           <div className="top_nav left col-12 col-md-auto text-center mb-3 mb-md-0">
             <Link href="/" locale={currentLocale}>
               <a>
-                <img
-                  className="regLogo"
-                  src="https://assets.abraacdn.com/assets/images/abraa-logo.svg"
-                  alt="Abraa"
-                  title="Abraa"
-                />
+                <img className="regLogo" src="https://assets.abraacdn.com/assets/images/abraa-logo.svg" alt="Abraa" title="Abraa" />
               </a>
             </Link>
           </div>
@@ -169,7 +166,7 @@ const ResetPassword = (props) => {
                       className="show-hide-psw"
                       type="checkbox"
                     /> */}
-                    <Checkbox onClick={() => setChecked(!checked)} />
+                    <MDBCheckbox onClick={() => setChecked(!checked)} />
                     <label style={{ marginTop: "8px" }} htmlFor="show-hide-psw">
                       show/hide password
                     </label>
@@ -261,20 +258,9 @@ const ResetPassword = (props) => {
                 </div>
               </div>
             </div>
-            <div
-              className=" login-panel sign_content_main d3"
-              id="forgot-pass-container"
-              style={{ display: "none" }}
-            >
+            <div className=" login-panel sign_content_main d3" id="forgot-pass-container" style={{ display: "none" }}>
               <h1 className="text-dubai">Reset Password </h1>
-              <div
-                action=""
-                className="col-md-12"
-                method="post"
-                id="recover-password"
-                name="recover-password"
-                noValidate="novalidate"
-              >
+              <div action="" className="col-md-12" method="post" id="recover-password" name="recover-password" noValidate="novalidate">
                 <div className>
                   <div className="form-group">
                     <div className="input-group">

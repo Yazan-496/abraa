@@ -2,8 +2,8 @@ import { useState } from "react"
 import { useRouter } from "next/router"
 import Head from "next/head"
 import { _confirmResetEmail } from "../../../redux/actions"
-import Checkbox from "@material/react-checkbox"
-import "@material/react-checkbox/dist/checkbox.css"
+import { MDBCheckbox } from "mdb-react-ui-kit"
+// import "@material/react-checkbox/dist/checkbox.css"
 
 const ResetPasswordEmail = () => {
   const router = useRouter()
@@ -105,7 +105,7 @@ const ResetPasswordEmail = () => {
                             }}
                             className="form-group"
                           >
-                            <Checkbox onClick={() => setChecked(!checked)} />
+                            <MDBCheckbox onClick={() => setChecked(!checked)} />
                             <label style={{ marginTop: "8px" }} htmlFor="show-hide-psw">
                               show/hide password
                             </label>

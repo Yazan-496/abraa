@@ -14,7 +14,6 @@ import { Radio } from "antd"
 import { _register, _getCities, _getCountries } from "../../../redux/actions"
 import Loading from "../loading"
 import dynamic from "next/dynamic"
-import Checkbox from "@material/react-checkbox"
 import { User, Mail, CheckSquare, MessageSquare, Power } from "react-feather"
 const SlideButton = dynamic(() => import("react-slide-button"), { ssr: false })
 import UploadFile from "../../../components/uploadFile/uploadFile"
@@ -42,9 +41,7 @@ function BusinessInformation(props) {
   const [password, setPassword] = useState(props.router.query.password)
   const [mobile_phone, setmobile] = useState(props.router.query.mobile)
   const [roles, setRoles] = useState([props.role])
-  const [signup_country_id, setSignup_country_id] = useState(
-    props.router.query.signup_country_id ? props.router.query.signup_country_id : 1
-  )
+  const [signup_country_id, setSignup_country_id] = useState(props.router.query.signup_country_id ? props.router.query.signup_country_id : 1)
 
   const [tags, setTags] = useState(props.keywords ? props.keywords : [])
   const [select, setSelect] = useState(false)
@@ -55,9 +52,7 @@ function BusinessInformation(props) {
   const onChange1 = ({ target: { value } }) => {
     setValue1(value)
   }
-  const [preffered_currency_id, setCurrency] = useState(
-    props.preffered_currency_id ? props.preffered_currency_id : "1"
-  )
+  const [preffered_currency_id, setCurrency] = useState(props.preffered_currency_id ? props.preffered_currency_id : "1")
 
   const [selectedValue, setSelectedValue] = useState(props.selectedValue ? props.selectedValue : 1)
   const [keywords, setKeywords] = useState(props.keywords ? props.keywords : null)
@@ -128,11 +123,7 @@ function BusinessInformation(props) {
       <Head>
         <link rel="stylesheet" href="https://www.abraa.com/assets/css/pages/slide-to-submit.css?V=1.1" />
         <link rel="stylesheet" href="https://www.abraa.com/assets/css/intlTelInput.css?b102" />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://www.abraa.com/assets/css/pages/abraav2-register.css?v=3.1"
-        ></link>
+        <link rel="stylesheet" type="text/css" href="https://www.abraa.com/assets/css/pages/abraav2-register.css?v=3.1"></link>
         <link data-react-helmet="true" rel="icon" href="https://s101.abraacdn.com/files/favicon-32x32.png" />
       </Head>
       <div
@@ -150,12 +141,7 @@ function BusinessInformation(props) {
           >
             <Link href="/" locale={currentLocale}>
               <a>
-                <img
-                  className="regLogo"
-                  src="https://assets.abraacdn.com/assets/images/abraa-logo.svg"
-                  alt="Abraa"
-                  title="Abraa"
-                />
+                <img className="regLogo" src="https://assets.abraacdn.com/assets/images/abraa-logo.svg" alt="Abraa" title="Abraa" />
               </a>
             </Link>
           </div>
@@ -298,9 +284,7 @@ function BusinessInformation(props) {
                   defaultValue={selectedValue}
                   onChange={(e) => getCitiesByCountry(e)}
                 >
-                  <option value={0}>
-                    {props?.selectedValue ? props.selectedValue : t("auth.main.select_country")}
-                  </option>
+                  <option value={0}>{props?.selectedValue ? props.selectedValue : t("auth.main.select_country")}</option>
                   {countriesArray.map((one, index) => (
                     <option key={one?.id} value={one?.id}>
                       {one.translations[0]?.name}
@@ -325,9 +309,7 @@ function BusinessInformation(props) {
                   defaultValue={selectedValue}
                   onChange={(e) => getCitiesByCountry(e)}
                 >
-                  <option value={0}>
-                    {props?.selectedValue ? props.selectedValue : t("auth.main.select_country")}
-                  </option>
+                  <option value={0}>{props?.selectedValue ? props.selectedValue : t("auth.main.select_country")}</option>
                   {countriesArray.map((one, index) => (
                     <option key={one?.id} value={one?.id}>
                       {one.translations[0]?.name}
@@ -364,11 +346,7 @@ function BusinessInformation(props) {
                 >
                   Yes
                 </Radio>
-                <Radio
-                  value="2"
-                  onClick={(e) => setCurrency(e.target.value)}
-                  checked={preffered_currency_id === "2"}
-                >
+                <Radio value="2" onClick={(e) => setCurrency(e.target.value)} checked={preffered_currency_id === "2"}>
                   No
                 </Radio>
               </div>
@@ -388,23 +366,14 @@ function BusinessInformation(props) {
                 >
                   Yes
                 </Radio>
-                <Radio
-                  value="2"
-                  onClick={(e) => setCurrency(e.target.value)}
-                  checked={preffered_currency_id === "2"}
-                >
+                <Radio value="2" onClick={(e) => setCurrency(e.target.value)} checked={preffered_currency_id === "2"}>
                   No
                 </Radio>
               </div>
               <UploadFile />
 
               <div id="slide-submitnextendbuy">
-                <SlideButton
-                  mainText="Slide Right To Validate"
-                  overlayText="Success  !"
-                  onSlideDone={(e) => handleSlide(e)}
-                  reset={reset}
-                />
+                <SlideButton mainText="Slide Right To Validate" overlayText="Success  !" onSlideDone={(e) => handleSlide(e)} reset={reset} />
                 <div
                   dir={currentLocale === "ar" ? "ltr" : "ltr"}
                   style={
@@ -414,9 +383,7 @@ function BusinessInformation(props) {
                     }
                   }
                 >
-                  <small className="text-danger">
-                    {!validatemessage && submit && !validate && "Please slide to validate"}
-                  </small>
+                  <small className="text-danger">{!validatemessage && submit && !validate && "Please slide to validate"}</small>
                 </div>
               </div>
               <div className="supplier_express_form custom-form">

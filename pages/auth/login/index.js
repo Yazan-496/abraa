@@ -4,8 +4,9 @@ import { useDispatch, useSelector } from "react-redux"
 // import FormGroup from "@mui/material/FormGroup"
 // import FormControlLabel from "@mui/material/FormControlLabel"
 // import Checkbox from "@mui/material/Checkbox"
-import Checkbox from "@material/react-checkbox"
-import "@material/react-checkbox/dist/checkbox.css"
+// import Checkbox from "@material/react-checkbox"
+// import "@material/react-checkbox/dist/checkbox.css"
+import { MDBCheckbox } from "mdb-react-ui-kit"
 import ButtonSpinner from "@/Component/Spinner/ButtonSpinner"
 import { withRouter } from "next/router"
 import { useRouter } from "next/router"
@@ -67,12 +68,7 @@ function Login(props) {
           <div className="top_nav left col-12 col-md-auto text-center mb-3 mb-md-0">
             <Link href="/" locale={currentLocale}>
               <a>
-                <img
-                  className="regLogo"
-                  src="https://assets.abraacdn.com/assets/images/abraa-logo.svg"
-                  alt="Abraa"
-                  title="Abraa"
-                />
+                <img className="regLogo" src="https://assets.abraacdn.com/assets/images/abraa-logo.svg" alt="Abraa" title="Abraa" />
               </a>
             </Link>
           </div>
@@ -121,13 +117,7 @@ function Login(props) {
               {message && messageReducer && (
                 <div className="alert alert-info">
                   {messageReducer}
-                  <button
-                    onClick={() => setMessage(false)}
-                    type="button"
-                    className="close"
-                    data-dismiss="alert"
-                    aria-label="Close"
-                  >
+                  <button onClick={() => setMessage(false)} type="button" className="close" data-dismiss="alert" aria-label="Close">
                     <span onClick={() => setMessage(false)} aria-hidden="true">
                       ×
                     </span>
@@ -209,50 +199,19 @@ function Login(props) {
                       />
                     </div>
                   </div>
-                  <div
-                    style={{
-                      display: "inline-flex"
-                    }}
-                    className=""
-                  >
-                    {/* <input
-                      defaultChecked
-                      style={{
-                        borderRadius: "initial",
-                        border: "solid 1px #a8a8a8"
-                      }}
-                      className="show-hide-psw"
-                      type="checkbox"
-                    /> */}
-                    {/* <FormGroup> */}
-                    {/* <FormControlLabel */}
-                    {/* control={ */}
-                    <Checkbox onClick={() => setCheckedPassword(!checkedPassword)} />
-                    {/* } */}
-                    {/* label="Label"
-                      /> */}
-                    {/* </FormGroup> */}
-
-                    <label style={{ marginTop: "8px" }} htmlFor="show-hide-psw">
-                      show/hide password
-                    </label>
+                  <div className="">
+                    <MDBCheckbox className="checkbox" onClick={() => setCheckedPassword(!checkedPassword)} />
+                    <label htmlFor="show-hide-psw">show/hide password</label>
                   </div>
                   <div
                     style={{
                       marginTop: "30px"
                     }}
-                    className="row checkbox-success"
+                    className="fancy-checkbox"
                   >
                     <div className="col-md-6">
                       <div className="checkboxxx">
-                        <input
-                          onClick={() => setChecked(!checked)}
-                          type="checkbox"
-                          defaultValue={1}
-                          id="remember"
-                          name="remember"
-                          defaultChecked
-                        />
+                        <input onClick={() => setChecked(!checked)} type="checkbox" defaultValue={1} id="remember" name="remember" defaultChecked />
                         <label className="fancy-checkbox" htmlFor="remember">
                           <BsCheck
                             style={{
@@ -381,20 +340,9 @@ function Login(props) {
                 </div>
               </div>
             </div>
-            <div
-              className=" login-panel sign_content_main d3"
-              id="forgot-pass-container"
-              style={{ display: "none" }}
-            >
+            <div className=" login-panel sign_content_main d3" id="forgot-pass-container" style={{ display: "none" }}>
               <h1 className="text-dubai">Password recovery </h1>
-              <div
-                action=""
-                className="col-md-12"
-                method="post"
-                id="recover-password"
-                name="recover-password"
-                noValidate="novalidate"
-              >
+              <div action="" className="col-md-12" method="post" id="recover-password" name="recover-password" noValidate="novalidate">
                 <div className>
                   <div className="form-group">
                     <div className="input-group">
