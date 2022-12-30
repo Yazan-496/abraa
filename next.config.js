@@ -4,6 +4,7 @@ const nextTranslate = require("next-translate")
 module.exports = {
   swcMinify: false,
   compiler: { removeCosole: { exclude: ["log"] } },
+
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
     if (!isServer) {
@@ -18,7 +19,14 @@ module.exports = {
   trailingSlash: true,
   staticPageGenerationTimeout: 1000000,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.experiments = { topLevelAwait: true }
+    plugins: [
+      new webpack.DefinePlugin({
+        "process.env": {
+          NODE_ENV: JSON.stringify("development")
+        }
+      })
+    ],
+      (config.experiments = { topLevelAwait: true })
     config.plugins.push(
       new webpack.ProvidePlugin({
         $: "jquery",
