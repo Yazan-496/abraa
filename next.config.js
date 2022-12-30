@@ -2,7 +2,7 @@
 const nextTranslate = require("next-translate")
 
 module.exports = {
-  swcMinify: true,
+  swcMinify: false,
   compiler: { removeCosole: { exclude: ["log"] } },
   reactStrictMode: true,
   webpack: (config, { isServer }) => {
