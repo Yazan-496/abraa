@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6449],{41182:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/new-dashboard/buyer-account/navbar1",function(){return _(86947)}])}},function(n){n.O(0,[4976,6947,9774,2888,179],function(){return n(n.s=41182)}),_N_E=n.O()}]);

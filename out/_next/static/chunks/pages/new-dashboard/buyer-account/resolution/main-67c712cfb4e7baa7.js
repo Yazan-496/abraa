@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[4793],{13196:function(n,u,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/new-dashboard/buyer-account/resolution/main",function(){return _(67420)}])}},function(n){n.O(0,[7420,9774,2888,179],function(){return n(n.s=13196)}),_N_E=n.O()}]);

@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[259],{76837:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/new-dashboard/sidebar1",function(){return u(83275)}])}},function(n){n.O(0,[4976,8907,9566,3609,1664,5675,1330,3275,9774,2888,179],function(){return n(n.s=76837)}),_N_E=n.O()}]);
