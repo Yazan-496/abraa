@@ -19,14 +19,7 @@ module.exports = {
   trailingSlash: true,
   staticPageGenerationTimeout: 1000000,
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    plugins: [
-      new webpack.DefinePlugin({
-        "process.env": {
-          NODE_ENV: JSON.stringify("development")
-        }
-      })
-    ],
-      (config.experiments = { topLevelAwait: true })
+    config.experiments = { topLevelAwait: true }
     config.plugins.push(
       new webpack.ProvidePlugin({
         $: "jquery",
