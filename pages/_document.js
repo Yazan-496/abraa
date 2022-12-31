@@ -9,6 +9,7 @@ class MyDocument extends Document {
     return (
       <Html lang={currentLocale}>
         <Head>
+          <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests" />
           <link href="http://65.1.197.155:81" rel="preconnect" />
           <link href="https://fonts.googleapis.com" rel="preconnect" />
           <link href="https://s101.abraacdn.com" rel="preconnect" />
