@@ -20,14 +20,14 @@ const Loading = () => {
         height: "100vh"
       }}
     >
-      <img
-        className=""
-        style={{
-          display: "flex"
-        }}
-        src="https://assets.abraacdn.com/assets/images/ajax-loader.gif"
-        alt="loader"
-      />
+      {/*<img*/}
+      {/*  className=""*/}
+      {/*  style={{*/}
+      {/*    display: "flex"*/}
+      {/*  }}*/}
+      {/*  src="https://assets.abraacdn.com/assets/images/ajax-loader.gif"*/}
+      {/*  alt="loader"*/}
+      {/*/>*/}
     </div>
     //       </div>
     //     </div>
