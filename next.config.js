@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require("next-translate")
-const securityHeaders = []
+const securityHeaders = [
+  {
+    key: 'x-custom-header',
+    value: 'http://65.1.197.155:81/abraa-backend-stores-products/public/graphql',
+  }
+]
 module.exports = {
   async headers() {
     return [
       {
-        // Apply these headers to all routes in your application.
-        source: '/:path*',
+        source: "/:path*",
         headers: securityHeaders,
       },
     ]
