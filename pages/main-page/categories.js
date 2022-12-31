@@ -12,9 +12,6 @@ export default function Categories(props) {
   const [sonCategories, setSonCategories] = useState([])
   const [loading, setLoading] = useState(false)
   let categories = props.categories
-  useEffect(() => {
-    // props.categories?.categories?.data && props.HandleLoadning(true)
-  }, [categories, props])
   const handleSelectCategory = (category) => {
     setParentCategory(category?.category_translations[0]?.category_name)
     setParentCategoryId(category?.id)

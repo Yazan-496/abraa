@@ -21,7 +21,7 @@ function Main(props) {
   if (Loading) {
   }
   if (error) {
-    setHandleLoad(true)
+    // setHandleLoad(true)
   } else {
     categories = data
   }
@@ -29,12 +29,6 @@ function Main(props) {
     categories && setHandleLoad(true)
   }, [categories])
   const router = useRouter()
-  const src =
-    "https://png.pngtree.com/png-vector/20220705/ourmid/pngtree-loading-icon-vector-transparent-png-image_5687537.png"
-  const [loading, setLoading] = useState(false)
-
-  const [height, setHeight] = useState(0)
-
   const HandleLoadning = (load) => {
     setHandleLoad(true)
   }
@@ -42,7 +36,7 @@ function Main(props) {
   return HandleLoad ? (
     <main className="position-relative home_wrapper" style={{ paddingTop: 137 }}>
       <div style={{ marginTop: "10px" }}>
-        <div></div>
+        {/*<div></div>*/}
         <section
           style={{
             height: "-webkit-fill-available !important"
