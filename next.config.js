@@ -15,6 +15,9 @@ module.exports = {
       },
     ]
   },
+  httpAgentOptions: {
+    keepAlive: false,
+  },
   swcMinify: true,
   compiler: { removeCosole: { exclude: ["log"] } },
 
