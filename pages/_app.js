@@ -2,6 +2,7 @@ import "remixicon/fonts/remixicon.css"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
 config.autoAddCss = true
+import ErrorBoundary from "./errorHandling"
 
 import "../styles/css.css"
 import "../styles/all.css"
@@ -146,7 +147,9 @@ function MyApp({ Component, pageProps }) {
           <title>Wholesale Market For B2B Suppliers, Wholesalers in Dubai, UAE - Abraa</title>
         </Head>
         <Loading />
+        <ErrorBoundary>
         <Component {...pageProps} />
+        </ErrorBoundary>
       </ApolloProvider>
 
       <ToastContainer
