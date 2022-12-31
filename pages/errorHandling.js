@@ -1,6 +1,6 @@
-import react from "react"
+import React from "react"
 
-class ErrorBoundary extends Component {
+class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props)
 
