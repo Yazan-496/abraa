@@ -1,8 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextTranslate = require("next-translate")
-
+const securityHeaders = []
 module.exports = {
-  swcMinify: false,
+  async headers() {
+    return [
+      {
+        // Apply these headers to all routes in your application.
+        source: '/:path*',
+        headers: securityHeaders,
+      },
+    ]
+  },
+  swcMinify: true,
   compiler: { removeCosole: { exclude: ["log"] } },
 
   reactStrictMode: true,
